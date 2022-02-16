@@ -3,7 +3,7 @@ import pyttsx3
 
 engineio = pyttsx3.init()
 voices = engineio.getProperty('voices')
-engineio.setProperty('rate', 100)    # Aquí puedes seleccionar la velocidad de la voz
+engineio.setProperty('rate', 150)    # Aquí puedes seleccionar la velocidad de la voz
 engineio.setProperty('voice',voices[54].id)
 
 pp = engineio.getProperty('voices')
@@ -17,10 +17,9 @@ def speak(text):
     engineio.say(text)
     engineio.runAndWait()
 
-speak("Qual o seu nome ?")
+speak("Olá, como posso ajudar")
 while(1):
     phrase = input("--> ")
     if (phrase == "exit"):
         exit(0)
     speak(phrase)
-    print(voices)
